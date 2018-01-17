@@ -6,9 +6,14 @@ int max(int a, int b)
     return a > b ? a : b;
 }
 
+int min(int a, int b)
+{
+    return a < b ? a : b;
+}
+
 int main()
 {
-    int data[max], n;
+    int data[MAX], n;
 
     scanf("%d", &n);
     for(int i = 0; i < n; i++) 
@@ -18,7 +23,7 @@ int main()
     int minv = data[0];
 
     for(int i = 1; i < n; i++) {
-        maxv = max(maxv, data[i] - min[v]);  //更新最大值
+        maxv = max(maxv, data[i] - minv);  //更新最大值
         minv = min(minv, data[i]);   //现阶段的最小值
     }
 
